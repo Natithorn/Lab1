@@ -51,14 +51,9 @@ namespace Lab1
             this.Num1.Text = "";
             this.Nub2.Text = "";
             this.Answer3.Text = "";
-        }
 
-    
-        private void but1_Click(object sender, EventArgs e)
-        {
-            this.Num1.Text = this.Num1.Text + "9";
-        }
 
+        }
         
     }
 }
