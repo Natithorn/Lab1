@@ -7,6 +7,7 @@ namespace Lab1
     {
         double input1 = 0;
         string opperation = "";
+        double result = 0;
         public Form1()
         {
             InitializeComponent();
@@ -54,7 +55,6 @@ namespace Lab1
         {
             this.TextShow1.Text = "";
             this.Num1.Text = "0";
-            this.Answer3.Text = "";
 
 
         }
@@ -138,29 +138,35 @@ namespace Lab1
         private void Sum_Click(object sender, EventArgs e)
         {
             double input2 = Double.Parse(this.Num1.Text);
-            double result = 0;
             if(this.opperation == "+")
             {
                 result = input1 + input2;
-                this.Answer3.Text = result.ToString();
+                Num1.Text = result.ToString("#,###.#####");
+
             } else if (this.opperation == "-")
             {
                 result = input1 - input2;
-                this.Answer3.Text = result.ToString();
+                Num1.Text = result.ToString("#,###.#####");
             } else if(this.opperation == "x")
             {
                 result = input1 * input2;
-                this.Answer3.Text = result.ToString();
+                Num1.Text = result.ToString("#,###.#####");
 
             }
             else if(this.opperation == "/")
                 result= input1 / input2;
-                this.Answer3.Text = result.ToString();
+                Num1.Text = result.ToString("#,###.#####");
+
+            
 
             
            
         }
 
+        private void Answer3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
